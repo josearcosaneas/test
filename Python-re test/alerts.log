@@ -1,0 +1,642 @@
+** Alert 1458520175.0: mail  -
+2016 Mar 21 01:29:35 User->monitord
+Rule: 502 (level 3) -> 'server started.'
+ started.
+
+** Alert 1458520723.151: mail  - syslog,sudo
+2016 Mar 21 01:38:43 User->/var/log/auth.log
+Rule: 5403 (level 4) -> 'First time user executed sudo.'
+User: root
+Mar 21 01:38:41 User sudo:     root : TTY=pts/3 ; PWD=/home/User/hids-2.8.1 ; USER=root ; COMMAND=/usr/sbin/ufw disable
+
+** Alert 1458520723.439: - pam,syslog,authentication_success,
+2016 Mar 21 01:38:43 User->/var/log/auth.log
+Rule: 5501 (level 3) -> 'Login session opened.'
+Mar 21 01:38:41 User sudo: pam_unix(sudo:session): session opened for user root by User(uid=0)
+
+** Alert 1458520723.693: - pam,syslog,
+2016 Mar 21 01:38:43 User->/var/log/auth.log
+Rule: 5502 (level 3) -> 'Login session closed.'
+Mar 21 01:38:42 User sudo: pam_unix(sudo:session): session closed for user root
+
+** Alert 1458521119.908: - rootcheck,
+2016 Mar 21 01:45:19 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Testing against the CIS Debian Linux Benchmark v1.0. File: /etc/debian_version. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458521119.1201: - rootcheck,
+2016 Mar 21 01:45:19 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux 1.4 - Robust partition scheme - /tmp is not on its own partition. File: /etc/fstab. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458521119.1512: - rootcheck,
+2016 Mar 21 01:45:19 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux 1.4 - Robust partition scheme - /opt is not on its own partition. File: /opt. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458521119.1817: - rootcheck,
+2016 Mar 21 01:45:19 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux 1.4 - Robust partition scheme - /var is not on its own partition. File: /etc/fstab. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458521119.2128: - rootcheck,
+2016 Mar 21 01:45:19 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux 4.6 - Disable standard boot services - Samba Enabled. File: /etc/init.d/samba. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458521119.2434: - rootcheck,
+2016 Mar 21 01:45:19 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux 4.16 - Disable standard boot services - MySQL server Enabled. File: /etc/init.d/mysql. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458521119.2748: - rootcheck,
+2016 Mar 21 01:45:19 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux 4.16 - Disable standard boot services - PostgreSQL server Enabled. File: /etc/init.d/postgresql. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458521119.3072: mail  - rootcheck,
+2016 Mar 21 01:45:19 User->rootcheck
+Rule: 510 (level 7) -> 'Host-based anomaly detection event (rootcheck).'
+File '/dev/.blkid.tab' present on /dev. Possible hidden file.
+
+** Alert 1458521119.3297: mail  - rootcheck,
+2016 Mar 21 01:45:19 User->rootcheck
+Rule: 510 (level 7) -> 'Host-based anomaly detection event (rootcheck).'
+File '/dev/.blkid.tab.old' present on /dev. Possible hidden file.
+
+** Alert 1458521119.3526: mail  - rootcheck,
+2016 Mar 21 01:45:19 User->rootcheck
+Rule: 510 (level 7) -> 'Host-based anomaly detection event (rootcheck).'
+File '/dev/.blkid.tab.old' is owned by root and has written permissions to anyone.
+
+** Alert 1458521386.3772: - syslog,dpkg,
+2016 Mar 21 00:49:46 User->/var/log/dpkg.log
+Rule: 2901 (level 3) -> 'New dpkg (Debian Package) requested to install.'
+2016-03-21 01:49:44 install expect:i386 <ninguna> 5.45-5ubuntu1
+
+** Alert 1458521386.3998: - syslog,dpkg,
+2016 Mar 21 00:49:46 User->/var/log/dpkg.log
+Rule: 2901 (level 3) -> 'New dpkg (Debian Package) requested to install.'
+2016-03-21 01:49:44 install hids:i386 <ninguna> 2.8.3-3precise
+
+** Alert 1458521388.4229: mail  - syslog,dpkg,config_changed,
+2016 Mar 21 00:49:48 User->/var/log/dpkg.log
+Rule: 2902 (level 7) -> 'New dpkg (Debian Package) installed.'
+2016-03-21 01:49:46 status installed man-db:i386 2.6.7.1-1
+
+** Alert 1458521388.4460: mail  - syslog,dpkg,config_changed,
+2016 Mar 21 00:49:48 User->/var/log/dpkg.log
+Rule: 2902 (level 7) -> 'New dpkg (Debian Package) installed.'
+2016-03-21 01:49:46 status installed expect:i386 5.45-5ubuntu1
+
+** Alert 1458521575.4695: mail  -
+2016 Mar 21 01:52:55 User->monitord
+Rule: 502 (level 3) -> 'server started.'
+ started.
+
+** Alert 1458521578.4849: - pam,syslog,authentication_success,
+2016 Mar 21 01:52:58 User->/var/log/auth.log
+Rule: 5501 (level 3) -> 'Login session opened.'
+Mar 21 01:52:57 User pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+
+** Alert 1458521661.5108: mail  - syscheck,
+2016 Mar 21 01:54:21 User->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/etc/init.d/
+Permissions changed from 'rwxr-xr-x' to 'r-xr-x--x'
+
+
+** Alert 1458521681.5354: mail  - syscheck,
+2016 Mar 21 01:54:41 User->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/etc/ld.so.cache'
+Size changed from '101399' to '101468'
+Old md5sum was: '6bc82b07549831c102cbd18adfd477ed'
+New md5sum is : '1849e53f3d588a5c1f3941f97e75486d'
+Old sha1sum was: 'd3ac7713375172e709767b1856ccc66887db992c'
+New sha1sum is : '66d8dcca91f94e952000f5a117d16aabefebf494'
+
+
+** Alert 1458521741.5808: mail  - syscheck,
+2016 Mar 21 01:55:41 User->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/etc/init.conf'
+Size changed from '88' to '31'
+Permissions changed from 'rw-------' to 'rwxrwxrwx'
+Old md5sum was: '30ad811e119c4eea7556bb7e4e9c4503'
+New md5sum is : '7638768c8353070a07f13608999cf5a9'
+Old sha1sum was: 'e4a18dcd034698c1addaca1dabe95bf54170c5d8'
+New sha1sum is : 'c389a83fc60f26b63d00bb079061502fe0ff48fd'
+
+
+** Alert 1458521911.6310: mail  - syscheck,
+2016 Mar 21 01:58:31 User->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/etc/apt/trusted.gpg'
+Size changed from '12926' to '14130'
+Old md5sum was: 'ff163e8e9e38670705a9f2cea8b530c9'
+New md5sum is : 'a2fa510077b347bc9643944bdbd7e3a3'
+Old sha1sum was: '616e231d7f6e20641a43331f9c1f7840ff90ce1c'
+New sha1sum is : '1682abb9fded36cc339c45d8219abdc6ee839783'
+
+
+** Alert 1458522318.6766: mail  - syslog,errors,
+2016 Mar 21 02:05:18 User->/var/log/auth.log
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:05:17 User dbus[779]: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.44" (uid=0 pid=1703 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.5" (uid=0 pid=893 comm="NetworkManager ")
+
+** Alert 1458522318.7259: mail  - syslog,errors,
+2016 Mar 21 02:05:18 User->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:05:17 User NetworkManager[893]: <warn> DNS: plugin dnsmasq update failed
+
+** Alert 1458522328.7504: mail  - syslog,errors,
+2016 Mar 21 02:05:28 User->/var/log/auth.log
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:05:28 User dbus[779]: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.44" (uid=0 pid=1703 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.5" (uid=0 pid=893 comm="NetworkManager ")
+
+** Alert 1458522338.7997: mail  - syslog,errors,
+2016 Mar 21 02:05:38 User->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:05:38 User whoopsie[1074]: Sent; server replied with: No error
+
+** Alert 1458522338.8232: mail  - syslog,errors,
+2016 Mar 21 02:05:38 User->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:05:38 User NetworkManager[893]: <info> (wlan0): IP6 addrconf timed out or failed.
+
+** Alert 1458522704.8486: mail  - pci_dss_10.6.1,
+2016 Mar 21 02:11:44 User->monitord
+Rule: 502 (level 3) -> 'server started.'
+ started.
+
+** Alert 1458522870.8655: mail  - syscheck,pci_dss_11.5,
+2016 Mar 21 02:14:30 User->syscheck
+Rule: 551 (level 7) -> 'Integrity checksum changed again (2nd time).'
+Integrity checksum changed for: '/etc/init.conf'
+Old md5sum was: '7638768c8353070a07f13608999cf5a9'
+New md5sum is : '1c8143e1b113a9960b4e0ec8eba43c1f'
+Old sha1sum was: 'c389a83fc60f26b63d00bb079061502fe0ff48fd'
+New sha1sum is : '03b0be114901321c9bb29f24ffb6fbc424a04c50'
+
+
+** Alert 1458523008.9104: mail  - syslog,errors,
+2016 Mar 21 02:16:48 User->/var/log/auth.log
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:16:47 User dbus[779]: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.44" (uid=0 pid=1703 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.5" (uid=0 pid=893 comm="NetworkManager ")
+
+** Alert 1458523014.9597: mail  - syslog,errors,
+2016 Mar 21 02:16:54 User->/var/log/auth.log
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:16:52 User dbus[779]: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.44" (uid=0 pid=1703 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.5" (uid=0 pid=893 comm="NetworkManager ")
+
+** Alert 1458523208.10090: mail  - syslog,errors,
+2016 Mar 21 02:20:08 User->/var/log/auth.log
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:20:06 User dbus[779]: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.44" (uid=0 pid=1703 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.5" (uid=0 pid=893 comm="NetworkManager ")
+
+** Alert 1458523216.10584: mail  - syslog,errors,
+2016 Mar 21 02:20:16 User->/var/log/auth.log
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:20:15 User dbus[779]: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.44" (uid=0 pid=1703 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.5" (uid=0 pid=893 comm="NetworkManager ")
+
+** Alert 1458523314.11078: mail  - syslog,errors,
+2016 Mar 21 02:21:54 User->/var/log/auth.log
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:21:54 User dbus[779]: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.44" (uid=0 pid=1703 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.5" (uid=0 pid=893 comm="NetworkManager ")
+
+** Alert 1458523356.11572: mail  - syslog,errors,
+2016 Mar 21 02:22:36 User->/var/log/auth.log
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:22:26 User dbus[779]: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.44" (uid=0 pid=1703 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.5" (uid=0 pid=893 comm="NetworkManager ")
+
+** Alert 1458523508.12066: mail  - syslog,errors,
+2016 Mar 21 02:25:08 User->/var/log/auth.log
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:25:07 User dbus[779]: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.44" (uid=0 pid=1703 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.5" (uid=0 pid=893 comm="NetworkManager ")
+
+** Alert 1458523582.12560: mail  - syslog,errors,
+2016 Mar 21 02:26:22 User->/var/log/auth.log
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:26:11 User dbus[779]: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.44" (uid=0 pid=1703 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.5" (uid=0 pid=893 comm="NetworkManager ")
+
+** Alert 1458523605.13054: - rootcheck
+2016 Mar 21 02:26:45 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Testing against the CIS Debian Linux Benchmark v1.0. File: /etc/debian_version. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458523605.13348: - rootcheck
+2016 Mar 21 02:26:45 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 1.4 - Robust partition scheme - /tmp is not on its own partition {CIS: 1.4 Debian Linux}. File: /etc/fstab. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458523605.13685: - rootcheck
+2016 Mar 21 02:26:45 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 1.4 - Robust partition scheme - /opt is not on its own partition {CIS: 1.4 Debian Linux}. File: /opt. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458523605.14016: - rootcheck
+2016 Mar 21 02:26:45 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 1.4 - Robust partition scheme - /var is not on its own partition {CIS: 1.4 Debian Linux}. File: /etc/fstab. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458523605.14353: - rootcheck
+2016 Mar 21 02:26:45 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 4.6 - Disable standard boot services - Samba Enabled {CIS: 4.6 Debian Linux} {PCI_DSS: 2.2.2}. File: /etc/init.d/samba. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458523605.14702: - rootcheck
+2016 Mar 21 02:26:45 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 4.16 - Disable standard boot services - MySQL server Enabled {CIS: 4.16 Debian Linux} {PCI_DSS: 2.2.2}. File: /etc/init.d/mysql. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458523605.15060: - rootcheck
+2016 Mar 21 02:26:45 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 4.16 - Disable standard boot services - PostgreSQL server Enabled {CIS: 4.16 Debian Linux} {PCI_DSS: 2.2.2}. File: /etc/init.d/postgresql. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458523605.15428: mail  - rootcheck
+2016 Mar 21 02:26:45 User->rootcheck
+Rule: 510 (level 7) -> 'Host-based anomaly detection event (rootcheck).'
+File '/dev/.blkid.tab' present on /dev. Possible hidden file.
+
+** Alert 1458523605.15653: mail  - rootcheck
+2016 Mar 21 02:26:45 User->rootcheck
+Rule: 510 (level 7) -> 'Host-based anomaly detection event (rootcheck).'
+File '/dev/.blkid.tab.old' present on /dev. Possible hidden file.
+
+** Alert 1458523605.15882: mail  - rootcheck
+2016 Mar 21 02:26:45 User->rootcheck
+Rule: 510 (level 7) -> 'Host-based anomaly detection event (rootcheck).'
+File '/dev/.blkid.tab.old' is owned by root and has written permissions to anyone.
+
+** Alert 1458523692.16128: mail  - syslog,errors,
+2016 Mar 21 02:28:12 User->/var/log/auth.log
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:28:12 User dbus[779]: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.44" (uid=0 pid=1703 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.5" (uid=0 pid=893 comm="NetworkManager ")
+
+** Alert 1458523810.16622: mail  - syslog,errors,
+2016 Mar 21 02:30:10 User->/var/log/auth.log
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:29:59 User dbus[779]: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.44" (uid=0 pid=1703 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.5" (uid=0 pid=893 comm="NetworkManager ")
+
+** Alert 1458524619.17116: mail  - syslog,sudo,
+2016 Mar 21 02:43:39 User->/var/log/auth.log
+Rule: 5403 (level 4) -> 'First time user executed sudo.'
+User: User
+Mar 21 02:43:38 User sudo:    User : TTY=pts/10 ; PWD=/home/User ; USER=root ; COMMAND=/bin/su
+
+** Alert 1458524619.17378: - pam,syslog,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 02:43:39 User->/var/log/auth.log
+Rule: 5501 (level 3) -> 'Login session opened.'
+Mar 21 02:43:38 User sudo: pam_unix(sudo:session): session opened for user root by User(uid=0)
+
+** Alert 1458524619.17649: - syslog, su,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 02:43:39 User->/var/log/auth.log
+Rule: 5303 (level 3) -> 'User successfully changed UID to root.'
+User: root
+Mar 21 02:43:38 User su[28440]: + /dev/pts/10 root:root
+
+** Alert 1458524619.17908: - pam,syslog,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 02:43:39 User->/var/log/auth.log
+Rule: 5501 (level 3) -> 'Login session opened.'
+Mar 21 02:43:38 User su[28440]: pam_unix(su:session): session opened for user root by User(uid=0)
+
+** Alert 1458525181.18182: mail  - syslog,errors,
+2016 Mar 21 02:53:01 User->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:53:01 User kernel: [10258.726349] nautilus[27546]: segfault at 1ffe ip b68042fc sp bfb842e8 error 4 in libc-2.19.so[b66d0000+1a8000]
+
+** Alert 1458525189.18488: - pam,syslog,pci_dss_10.2.5,
+2016 Mar 21 02:53:09 User->/var/log/auth.log
+Rule: 5502 (level 3) -> 'Login session closed.'
+Mar 21 02:53:08 User su[13776]: pam_unix(su:session): session closed for user root
+
+** Alert 1458525189.18723: - pam,syslog,pci_dss_10.2.5,
+2016 Mar 21 02:53:09 User->/var/log/auth.log
+Rule: 5502 (level 3) -> 'Login session closed.'
+Mar 21 02:53:08 User sudo: pam_unix(sudo:session): session closed for user root
+
+** Alert 1458525292.18955: mail  - syslog,errors,
+2016 Mar 21 02:54:52 User->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 02:54:50 User kernel: [10367.586569] gedit[28622]: segfault at 46 ip b72a001f sp bff1ece0 error 4 in libgtk-3.so.0.1000.8[b704a000+544000]
+
+** Alert 1458525308.19264: - pam,syslog,pci_dss_10.2.5,
+2016 Mar 21 02:55:08 User->/var/log/auth.log
+Rule: 5502 (level 3) -> 'Login session closed.'
+Mar 21 02:55:07 User su[28440]: pam_unix(su:session): session closed for user root
+
+** Alert 1458525308.19499: - pam,syslog,pci_dss_10.2.5,
+2016 Mar 21 02:55:08 User->/var/log/auth.log
+Rule: 5502 (level 3) -> 'Login session closed.'
+Mar 21 02:55:07 User sudo: pam_unix(sudo:session): session closed for user root
+
+** Alert 1458526793.19731: mail  - syslog,errors,
+2016 Mar 21 03:19:53 User->/var/log/auth.log
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 03:19:40 User dbus[779]: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.44" (uid=0 pid=1703 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.5" (uid=0 pid=893 comm="NetworkManager ")
+
+** Alert 1458526793.20225: mail  - syslog,errors,
+2016 Mar 21 03:19:53 User->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 03:19:40 User gnome-session[1975]: CRITICAL: We failed, but the fail whale is dead. Sorry....
+
+** Alert 1458526793.20489: mail  - syslog,errors,
+2016 Mar 21 03:19:53 User->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 03:19:53 User kernel: [11860.708352] ata1.01: failed to resume link (SControl 0)
+
+** Alert 1458526793.20740: mail  - syslog,errors,
+2016 Mar 21 03:19:53 User->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 03:19:53 User kernel: [11860.708423] ata2.01: failed to resume link (SControl 0)
+
+** Alert 1458526803.20991: mail  - syslog,errors,
+2016 Mar 21 03:20:03 User->/var/log/auth.log
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 03:20:02 User dbus[779]: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.44" (uid=0 pid=1703 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.5" (uid=0 pid=893 comm="NetworkManager ")
+
+** Alert 1458526821.21485: mail  - syslog,errors,
+2016 Mar 21 03:20:21 User->/var/log/auth.log
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 03:20:08 User dbus[779]: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.44" (uid=0 pid=1703 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.5" (uid=0 pid=893 comm="NetworkManager ")
+
+** Alert 1458526821.21979: mail  - syslog,errors,
+2016 Mar 21 03:20:21 User->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 03:20:20 User kernel: [11881.525889] ata2.01: failed to resume link (SControl 0)
+
+** Alert 1458526821.22230: mail  - syslog,errors,
+2016 Mar 21 03:20:21 User->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 03:20:20 User kernel: [11881.526010] ata1.01: failed to resume link (SControl 0)
+
+** Alert 1458526821.22481: mail  - syslog,errors,
+2016 Mar 21 03:20:21 User->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 03:20:20 User kernel: [11884.472047] traps: irqbalance[1053] general protection ip:80490a0 sp:bfe51acc error:0 in irqbalance[8048000+9000]
+
+** Alert 1458526821.22790: mail  - syslog,errors,
+2016 Mar 21 03:20:21 User->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 03:20:20 User kernel: [11884.472061] Core dump to |/usr/share/apport/apport 1053 11 0 1053 pipe failed
+
+** Alert 1458526830.23063: mail  - syslog,errors,
+2016 Mar 21 03:20:30 User->/var/log/auth.log
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 03:20:28 User dbus[779]: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.44" (uid=0 pid=1703 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.5" (uid=0 pid=893 comm="NetworkManager ")
+
+** Alert 1458551086.23557: - syslog,sudo,pci_dss_10.2.5,pci_dss_10.2.2,
+2016 Mar 21 10:04:46 User->/var/log/auth.log
+Rule: 5402 (level 3) -> 'Successful sudo to ROOT executed'
+User: User
+Mar 21 10:04:45 User sudo:    User : TTY=pts/3 ; PWD=/home/User ; USER=root ; COMMAND=/bin/su
+
+** Alert 1458551086.23844: - pam,syslog,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 10:04:46 User->/var/log/auth.log
+Rule: 5501 (level 3) -> 'Login session opened.'
+Mar 21 10:04:45 User sudo: pam_unix(sudo:session): session opened for user root by User(uid=0)
+
+** Alert 1458551086.24115: - syslog, su,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 10:04:46 User->/var/log/auth.log
+Rule: 5303 (level 3) -> 'User successfully changed UID to root.'
+User: root
+Mar 21 10:04:45 User su[731]: + /dev/pts/3 root:root
+
+** Alert 1458551086.24371: - pam,syslog,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 10:04:46 User->/var/log/auth.log
+Rule: 5501 (level 3) -> 'Login session opened.'
+Mar 21 10:04:45 User su[731]: pam_unix(su:session): session opened for user root by User(uid=0)
+
+** Alert 1458554541.24643: - syslog,sudo,pci_dss_10.2.5,pci_dss_10.2.2,
+2016 Mar 21 11:02:21 User->/var/log/auth.log
+Rule: 5402 (level 3) -> 'Successful sudo to ROOT executed'
+User: User
+Mar 21 11:02:19 User sudo:    User : TTY=pts/9 ; PWD=/home/User ; USER=root ; COMMAND=/bin/su
+
+** Alert 1458554541.24930: - pam,syslog,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 11:02:21 User->/var/log/auth.log
+Rule: 5501 (level 3) -> 'Login session opened.'
+Mar 21 11:02:19 User sudo: pam_unix(sudo:session): session opened for user root by User(uid=0)
+
+** Alert 1458554541.25201: - syslog, su,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 11:02:21 User->/var/log/auth.log
+Rule: 5303 (level 3) -> 'User successfully changed UID to root.'
+User: root
+Mar 21 11:02:19 User su[1553]: + /dev/pts/9 root:root
+
+** Alert 1458554541.25458: - pam,syslog,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 11:02:21 User->/var/log/auth.log
+Rule: 5501 (level 3) -> 'Login session opened.'
+Mar 21 11:02:19 User su[1553]: pam_unix(su:session): session opened for user root by User(uid=0)
+
+** Alert 1458559471.25731: mail  - pci_dss_10.6.1,
+2016 Mar 21 12:24:31 User->monitord
+Rule: 502 (level 3) -> 'server started.'
+ started.
+
+** Alert 1458560048.25901: mail  - pci_dss_10.6.1,
+2016 Mar 21 12:34:08 User->monitord
+Rule: 502 (level 3) -> 'server started.'
+ started.
+
+** Alert 1458560113.26071: mail  - syslog,errors,
+2016 Mar 21 12:35:13 User->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 12:35:12 User kernel: [45178.193953] gedit[5039]: segfault at 1 ip aea93656 sp bf8f58b0 error 4 in pango-graphite.so[aea8e000+9000]
+
+** Alert 1458560949.26373: - rootcheck
+2016 Mar 21 12:49:09 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Testing against the CIS Debian Linux Benchmark v1.0. File: /etc/debian_version. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458560949.26667: - rootcheck
+2016 Mar 21 12:49:09 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 1.4 - Robust partition scheme - /tmp is not on its own partition {CIS: 1.4 Debian Linux}. File: /etc/fstab. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458560949.27004: - rootcheck
+2016 Mar 21 12:49:09 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 1.4 - Robust partition scheme - /opt is not on its own partition {CIS: 1.4 Debian Linux}. File: /opt. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458560949.27335: - rootcheck
+2016 Mar 21 12:49:09 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 1.4 - Robust partition scheme - /var is not on its own partition {CIS: 1.4 Debian Linux}. File: /etc/fstab. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458560949.27672: - rootcheck
+2016 Mar 21 12:49:09 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 4.6 - Disable standard boot services - Samba Enabled {CIS: 4.6 Debian Linux} {PCI_DSS: 2.2.2}. File: /etc/init.d/samba. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458560949.28021: - rootcheck
+2016 Mar 21 12:49:09 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 4.16 - Disable standard boot services - MySQL server Enabled {CIS: 4.16 Debian Linux} {PCI_DSS: 2.2.2}. File: /etc/init.d/mysql. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458560949.28379: - rootcheck
+2016 Mar 21 12:49:09 User->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 4.16 - Disable standard boot services - PostgreSQL server Enabled {CIS: 4.16 Debian Linux} {PCI_DSS: 2.2.2}. File: /etc/init.d/postgresql. Reference: http://www.net/wiki/index.php/CIS_DebianLinux .
+
+** Alert 1458560949.28747: mail  - rootcheck
+2016 Mar 21 12:49:09 User->rootcheck
+Rule: 510 (level 7) -> 'Host-based anomaly detection event (rootcheck).'
+File '/dev/.blkid.tab' present on /dev. Possible hidden file.
+
+** Alert 1458560949.28972: mail  - rootcheck
+2016 Mar 21 12:49:09 User->rootcheck
+Rule: 510 (level 7) -> 'Host-based anomaly detection event (rootcheck).'
+File '/dev/.blkid.tab.old' present on /dev. Possible hidden file.
+
+** Alert 1458560949.29201: mail  - rootcheck
+2016 Mar 21 12:49:09 User->rootcheck
+Rule: 510 (level 7) -> 'Host-based anomaly detection event (rootcheck).'
+File '/dev/.blkid.tab.old' is owned by root and has written permissions to anyone.
+
+** Alert 1458561084.29447: mail  - syslog,errors,
+2016 Mar 21 12:51:24 User->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 12:51:22 User kernel: [46148.141903] gedit[5361]: segfault at 30 ip aea55673 sp bfea07b0 error 4 in pango-graphite.so[aea50000+9000]
+
+** Alert 1458564248.29750: mail  - syslog,errors,
+2016 Mar 21 13:44:08 User->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 13:44:07 User kernel: [   49.702112] vboxdrv: module verification failed: signature and/or  required key missing - tainting kernel
+
+** Alert 1458564249.30051: mail  - pci_dss_10.6.1,
+2016 Mar 21 13:44:09 User->monitord
+Rule: 502 (level 3) -> 'server started.'
+ started.
+
+** Alert 1458564249.30221: mail  - syslog,errors,
+2016 Mar 21 13:44:09 User->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Mar 21 13:44:09 User colord: plugin /usr/lib/i386-linux-gnu/colord-plugins/libcd_plugin_sane.so not loaded: plugin refused to load
+
+** Alert 1458564259.30515: - pam,syslog,pci_dss_10.2.5,
+2016 Mar 21 13:44:19 User->/var/log/auth.log
+Rule: 5502 (level 3) -> 'Login session closed.'
+Mar 21 13:44:18 User lightdm: pam_unix(lightdm-greeter:session): session closed for user lightdm
+
+** Alert 1458564259.30764: - pam,syslog,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 13:44:19 User->/var/log/auth.log
+Rule: 5501 (level 3) -> 'Login session opened.'
+Mar 21 13:44:18 User lightdm: pam_unix(lightdm:session): session opened for user User by (uid=0)
+
+** Alert 1458564311.31037: - syslog,sudo,pci_dss_10.2.5,pci_dss_10.2.2,
+2016 Mar 21 13:45:11 User->/var/log/auth.log
+Rule: 5402 (level 3) -> 'Successful sudo to ROOT executed'
+User: User
+Mar 21 13:45:09 User sudo:    User : TTY=pts/4 ; PWD=/home/User ; USER=root ; COMMAND=/bin/su
+
+** Alert 1458564311.31324: - pam,syslog,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 13:45:11 User->/var/log/auth.log
+Rule: 5501 (level 3) -> 'Login session opened.'
+Mar 21 13:45:09 User sudo: pam_unix(sudo:session): session opened for user root by User(uid=0)
+
+** Alert 1458564311.31595: - syslog, su,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 13:45:11 User->/var/log/auth.log
+Rule: 5303 (level 3) -> 'User successfully changed UID to root.'
+User: root
+Mar 21 13:45:09 User su[3018]: + /dev/pts/4 root:root
+
+** Alert 1458564311.31852: - pam,syslog,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 13:45:11 User->/var/log/auth.log
+Rule: 5501 (level 3) -> 'Login session opened.'
+Mar 21 13:45:09 User su[3018]: pam_unix(su:session): session opened for user root by User(uid=0)
+
+** Alert 1458564335.32125: - pam,syslog,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 13:45:35 User->/var/log/auth.log
+Rule: 5501 (level 3) -> 'Login session opened.'
+Mar 21 13:45:33 User pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+
+** Alert 1458564503.32400: - pam,syslog,pci_dss_10.2.5,
+2016 Mar 21 13:48:23 User->/var/log/auth.log
+Rule: 5502 (level 3) -> 'Login session closed.'
+Mar 21 13:48:22 User su[3018]: pam_unix(su:session): session closed for user root
+
+** Alert 1458564503.32634: - pam,syslog,pci_dss_10.2.5,
+2016 Mar 21 13:48:23 User->/var/log/auth.log
+Rule: 5502 (level 3) -> 'Login session closed.'
+Mar 21 13:48:22 User sudo: pam_unix(sudo:session): session closed for user root
+
+** Alert 1458564587.32866: - syslog,sudo,pci_dss_10.2.5,pci_dss_10.2.2,
+2016 Mar 21 13:49:47 User->/var/log/auth.log
+Rule: 5402 (level 3) -> 'Successful sudo to ROOT executed'
+User: User
+Mar 21 13:49:46 User sudo:    User : TTY=pts/1 ; PWD=/home/User ; USER=root ; COMMAND=/bin/su
+
+** Alert 1458564587.33153: - pam,syslog,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 13:49:47 User->/var/log/auth.log
+Rule: 5501 (level 3) -> 'Login session opened.'
+Mar 21 13:49:46 User sudo: pam_unix(sudo:session): session opened for user root by User(uid=0)
+
+** Alert 1458564587.33424: - syslog, su,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 13:49:47 User->/var/log/auth.log
+Rule: 5303 (level 3) -> 'User successfully changed UID to root.'
+User: root
+Mar 21 13:49:46 User su[3228]: + /dev/pts/1 root:root
+
+** Alert 1458564587.33681: - pam,syslog,authentication_success,pci_dss_10.2.5,
+2016 Mar 21 13:49:47 User->/var/log/auth.log
+Rule: 5501 (level 3) -> 'Login session opened.'
+Mar 21 13:49:46 User su[3228]: pam_unix(su:session): session opened for user root by User(uid=0)
+
+** Alert 1458564595.33954: mail  - syscheck,pci_dss_11.5,
+2016 Mar 21 13:49:55 User->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/etc/cups/subscriptions.conf'
+Size changed from '241' to '391'
+Old md5sum was: '9e8720281fbc6d0fc4dcf07b1eb74988'
+New md5sum is : 'b0d6e38cda25f54d221f33f0b92b5363'
+Old sha1sum was: 'e96e699acb0a6adb92fe93adee397f94a90f5b08'
+New sha1sum is : '8cf428fabb5c1e2a5aa2faef4bb16abec9b8f547'
+
+
+** Alert 1458564595.34428: mail  - syscheck,pci_dss_11.5,
+2016 Mar 21 13:49:55 User->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/etc/cups/subscriptions.conf.O'
+Old md5sum was: 'd29c0c479989531288527bcb8842d9a1'
+New md5sum is : 'd990d458592b6acb3569cfc84a05b882'
+Old sha1sum was: 'f640362783432f098d78bde9739eb0beaf1acffe'
+New sha1sum is : '2271dba28dfa846fbd04c101138f6af79e442278'
+
+
+** Alert 1458564607.34871: mail  - syscheck,pci_dss_11.5,
+2016 Mar 21 13:50:07 User->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/etc/blkid.tab'
+Old md5sum was: 'aaf108af04e7a44ac5fa3c23066cd715'
+New md5sum is : 'db4ddda5e5fdda3632c84389b4afeff2'
+Old sha1sum was: 'a1e03dbbcfed495d3a3e25310bf0341ad8169feb'
+New sha1sum is : 'ca30e5ca9229d7b3e4330be25e34f2ce75c5d1fc'
+
+
+** Alert 1458564611.35298: mail  - pci_dss_10.2.7,pci_dss_10.6.1,
+2016 Mar 21 13:50:11 User->netstat -tan |grep LISTEN |grep -v 127.0.0.1 | sort
+Rule: 533 (level 7) -> 'Listened ports status (netstat) changed (new port opened or closed).'
+ output: 'netstat -tan |grep LISTEN |grep -v 127.0.0.1 | sort':
+tcp        0      0 0.0.0.0:139             0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:445             0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:8834            0.0.0.0:*               LISTEN
+tcp        0      0 127.0.1.1:53            0.0.0.0:*               LISTEN
+tcp6       0      0 ::1:631                 :::*                    LISTEN
+tcp6       0      0 :::139                  :::*                    LISTEN
+tcp6       0      0 :::22                   :::*                    LISTEN
+tcp6       0      0 :::445                  :::*                    LISTEN
+tcp6       0      0 :::8834                 :::*                    LISTEN
+Previous output:
+ output: 'netstat -tan |grep LISTEN |grep -v 127.0.0.1 | sort':
+tcp        0      0 0.0.0.0:139             0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:445             0.0.0.0:*               LISTEN
+tcp        0      0 127.0.1.1:53            0.0.0.0:*               LISTEN
+tcp6       0      0 :::139                  :::*                    LISTEN
+tcp6       0      0 :::22                   :::*                    LISTEN
+tcp6       0      0 :::445                  :::*                    LISTEN
+
